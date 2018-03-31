@@ -1,0 +1,24 @@
+{
+  "name": "asp.net-core web app",
+  "description": "Shows how to deploy ASP.NET Core app on Heroku",
+  "logo": "https://raw.githubusercontent.com/herokumx/herokumxnet/master/NETChatterGroup.png",
+  "keywords": ["heroku", "asp.net-core"],
+  "env": {
+    "PUBLISH_APP_DIR": {
+      "description": "https://github.com/simonefregonese/galii-on-the-road/",
+      "value" : "/src/WebApp"
+    },
+    "LAUNCH_ASSEMBLY_NAME": {
+      "description": "galii-on-the-road",
+      "value": "WebApp.dll"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/ORuban/aspnetcore-buildpack.git"
+    }
+  ]
+}
